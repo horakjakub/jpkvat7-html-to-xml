@@ -42,7 +42,7 @@ fs.readFile(fileName, 'utf8', function (err,data) {
           <K_43>${el[13]}</K_43>
         </ZakupWiersz>`
   });  
-
+  
  const purchaseSummary =  `
     <ZakupCtrl>
       <LiczbaWierszyZakupow>${purchaseVatIncludedXMLRecord.length}</LiczbaWierszyZakupow>
@@ -95,7 +95,7 @@ function lastDayOfMonth(month, year) {
     if (parseInt(month) === 2) { 
         return '28';
     }
-    if (parseInt(month) % 2 === 0) {
+    if (parseInt(month) % 2 !== 0) {
         return '31';
     }
     return '30';
